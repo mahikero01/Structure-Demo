@@ -14,6 +14,7 @@
         Me.List.Add(newCustomer)
     End Sub
 
+
     Public Sub Remove(oldCustomer As Customer)
         Me.List.Remove(oldCustomer)
     End Sub
