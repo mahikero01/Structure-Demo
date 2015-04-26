@@ -13,6 +13,7 @@
         'Create some customers
 
         objCustomers.Clear()
+        lstCustomers.Items.Clear()
         CreateCustomer("Darrel", "Hilton", _
         "dhilton@somecompany.com")
         CreateCustomer("Frank", "Peoples", _

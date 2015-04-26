@@ -11,6 +11,8 @@
 
     Public Sub Remove(oldCustomer As Customer)
         Me.List.Remove(oldCustomer)
+
+        EmailHashtable.Remove(oldCustomer.Email.ToLower)
     End Sub
 
     Public ReadOnly Property EmailHashtable As Hashtable
@@ -33,4 +35,15 @@
             Return CType(EmailHashtable.Item(email), Customer)
         End Get
     End Property
+
+    Public Shadows Sub Clear()
+        'Clear the CollectionBase
+        MyBase.Clear()
+        'Clear your hashtable
+        EmailHashtable.Clear()
+    End Sub
+
+    Public Shadows Sub RemoveAt(index As Integer)
+        Remove(Item(index))
+    End Sub
 End Class
