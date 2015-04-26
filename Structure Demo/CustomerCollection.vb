@@ -27,4 +27,10 @@
             Me.List.Item(index) = value
         End Set
     End Property
+
+    Default Public ReadOnly Property Item(email As String) As Customer
+        Get
+            Return CType(EmailHashtable.Item(email), Customer)
+        End Get
+    End Property
 End Class

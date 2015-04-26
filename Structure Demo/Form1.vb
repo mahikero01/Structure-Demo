@@ -63,4 +63,17 @@ lastName As String, email As String)
     Private Sub lstCustomers_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstCustomers.SelectedIndexChanged
         DisplayCustomer(SelectedCustomer)
     End Sub
+
+    Private Sub btnLookup_Click(sender As Object, e As EventArgs) Handles btnLookup.Click
+        Dim objFoundCustomer As Customer = objCustomers(txtEmail.Text)
+        If Not IsNothing(objFoundCustomer.Email) Then
+            'Display the customers name
+            MessageBox.Show("The customers name is: " &
+            objFoundCustomer.Name, "Structure Demo")
+        Else
+            'Display an error
+            MessageBox.Show("There is no customer with the e-mail" &
+            " address " & txtEmail.Text & ".", "Structure Demo")
+        End If
+    End Sub
 End Class

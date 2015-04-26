@@ -33,6 +33,7 @@ Partial Class Form1
         Me.btnListCustomer = New System.Windows.Forms.Button()
         Me.lstCustomers = New System.Windows.Forms.ListBox()
         Me.btnDeleteCustomer = New System.Windows.Forms.Button()
+        Me.btnLookup = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblName
@@ -96,7 +97,7 @@ Partial Class Form1
         '
         Me.txtEmail.Location = New System.Drawing.Point(122, 298)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(100, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(56, 20)
         Me.txtEmail.TabIndex = 7
         '
         'btnListCustomer
@@ -126,11 +127,21 @@ Partial Class Form1
         Me.btnDeleteCustomer.Text = "Delete Customer"
         Me.btnDeleteCustomer.UseVisualStyleBackColor = True
         '
+        'btnLookup
+        '
+        Me.btnLookup.Location = New System.Drawing.Point(184, 296)
+        Me.btnLookup.Name = "btnLookup"
+        Me.btnLookup.Size = New System.Drawing.Size(75, 23)
+        Me.btnLookup.TabIndex = 11
+        Me.btnLookup.Text = "Lookup"
+        Me.btnLookup.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 393)
+        Me.Controls.Add(Me.btnLookup)
         Me.Controls.Add(Me.btnDeleteCustomer)
         Me.Controls.Add(Me.lstCustomers)
         Me.Controls.Add(Me.btnListCustomer)
@@ -159,5 +170,6 @@ Partial Class Form1
     Friend WithEvents btnListCustomer As System.Windows.Forms.Button
     Friend WithEvents lstCustomers As System.Windows.Forms.ListBox
     Friend WithEvents btnDeleteCustomer As System.Windows.Forms.Button
+    Friend WithEvents btnLookup As System.Windows.Forms.Button
 
 End Class
