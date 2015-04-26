@@ -1,5 +1,8 @@
 ﻿Public Class CustomerCollection
     Inherits CollectionBase
+
+    Private objEmailHashtable As New Hashtable
+
     Public Sub Add(newCustomer As Customer)
         Me.List.Add(newCustomer)
     End Sub
