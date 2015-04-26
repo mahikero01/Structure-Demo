@@ -12,6 +12,8 @@
     End Sub
 
 
+
+
     Default Public Property Item(index As Integer) As Customer
         Get
             Return CType(Me.List.Item(index), Customer)
