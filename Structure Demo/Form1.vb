@@ -11,6 +11,8 @@
 
     Private Sub btnListCustomer_Click(sender As Object, e As EventArgs) Handles btnListCustomer.Click
         'Create some customers
+
+        objCustomers.Clear()
         CreateCustomer("Darrel", "Hilton", _
         "dhilton@somecompany.com")
         CreateCustomer("Frank", "Peoples", _
