@@ -5,11 +5,19 @@
 
     Public Sub Add(newCustomer As Customer)
         Me.List.Add(newCustomer)
+
+        EmailHashtable.Add(newCustomer.Email, newCustomer)
     End Sub
 
     Public Sub Remove(oldCustomer As Customer)
         Me.List.Remove(oldCustomer)
     End Sub
+
+    Public ReadOnly Property EmailHashtable As Hashtable
+        Get
+            Return objEmailHashtable
+        End Get
+    End Property
 
     Default Public Property Item(index As Integer) As Customer
         Get
