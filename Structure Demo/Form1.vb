@@ -36,7 +36,7 @@ lastName As String, email As String)
     Public ReadOnly Property SelectedCustomer() As Customer
         Get
             If lstCustomers.SelectedIndex <> -1 Then
-                Return CType(objCustomers(lstCustomers.SelectedIndex), Customer)
+                Return objCustomers(lstCustomers.SelectedIndex)
             End If
         End Get
     End Property
