@@ -6,7 +6,7 @@
     Public Sub Add(newCustomer As Customer)
         Me.List.Add(newCustomer)
 
-        EmailHashtable.Add(newCustomer.Email, newCustomer)
+        EmailHashtable.Add(newCustomer.Email.ToLower, newCustomer)
     End Sub
 
     Public Sub Remove(oldCustomer As Customer)
@@ -32,7 +32,7 @@
 
     Default Public ReadOnly Property Item(email As String) As Customer
         Get
-            Return CType(EmailHashtable.Item(email), Customer)
+            Return CType(EmailHashtable.Item(email.ToLower), Customer)
         End Get
     End Property
 
